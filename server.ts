@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
-import { createServer as createViteServer } from "vite";
+
 import { getConfig, updateConfig, submitVote, removeVote, getRanking, clearAllVotes } from "./server/db.js";
 import { getParsedSongs } from "./src/data/songsData.js";
 
@@ -236,6 +236,7 @@ app.post("/api/results/clear", checkAuth(RESULTS_PASSWORD), async (req, res) => 
 async function setupServer() {
   if (process.env.NODE_ENV !== "production") {
     // Development Mode
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
