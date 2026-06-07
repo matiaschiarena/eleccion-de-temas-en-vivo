@@ -16,8 +16,8 @@ app.use(express.json({ limit: "15mb" }));
 app.use(express.urlencoded({ limit: "15mb", extended: true }));
 
 // Set default passwords
-const CONFIG_PASSWORD = process.env.CONFIG_PASSWORD || "saynomore";
-const RESULTS_PASSWORD = process.env.RESULTS_PASSWORD || "charly";
+const CONFIG_PASSWORD = process.env.CONFIG_PASSWORD || "eitileda";
+const RESULTS_PASSWORD = process.env.RESULTS_PASSWORD || "eitileda";
 
 // Helper middleware for basic API authentication
 function checkAuth(expectedPassword: string) {
