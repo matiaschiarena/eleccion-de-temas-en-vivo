@@ -1,0 +1,6 @@
+{
+  "name": "Eleccion de temas en vivo",
+  "description": "Aplicación web interactiva para el show homenaje a Charly García. Permite al público elegir temas en vivo y visualizar estadísticas del ranking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
